@@ -9,8 +9,8 @@ class GameStartScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => GamePlayScreen())),
-            child: const Text("Start"),
+          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const GamePlayScreen())),
+          child: const Text('START'),
         ),
       ),
     );
