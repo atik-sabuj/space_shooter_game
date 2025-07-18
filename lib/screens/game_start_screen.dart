@@ -7,10 +7,62 @@ class GameStartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const GamePlayScreen())),
-          child: const Text('START'),
+      backgroundColor: Colors.black, // Space-themed background
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+              // 🚀 Space Game Logo
+              Image.asset(
+                'assets/images/space_game.png',
+                width: 160,
+                height: 160,
+              ),
+
+              const SizedBox(height: 30),
+
+              // 🌌 Game Title
+              const Text(
+                'SPACE SHOOTER',
+                style: TextStyle(
+                  fontSize: 28,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                ),
+              ),
+
+              const SizedBox(height: 40),
+
+              // 🎮 Start Button
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const GamePlayScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurpleAccent,
+                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  elevation: 8,
+                ),
+                child: const Text(
+                  'START',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    letterSpacing: 1.5,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
