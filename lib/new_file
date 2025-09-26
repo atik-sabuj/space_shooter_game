@@ -15,7 +15,9 @@ class ApiProvider with ChangeNotifier {
       // Handle errors here
       print(e);
     }
-  }import 'package:flutter/material.dart';
+  }
+
+import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'locator.dart';
 import 'repository.dart';
